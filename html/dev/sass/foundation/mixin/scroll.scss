@@ -1,0 +1,22 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin scroll($c01: null, $c02: null) {
+
+    @if $c01 == null { $c01: rgba(0,0,0,.55) }
+
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #{$c01};
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track-piece {
+        @if $c02 != null {
+            background: #{$c02};
+        }
+    }
+    
+}

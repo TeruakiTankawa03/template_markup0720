@@ -1,0 +1,16 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin absolute-x($t: null, $b: null) {
+
+    @if $t == null { $t: auto }
+    @if $b == null { $b: auto }
+
+    position: absolute;
+    display:block;
+    left:50%;
+    transform: translateX(-50%);
+    top:#{$t};
+    bottom:#{$b};
+
+}

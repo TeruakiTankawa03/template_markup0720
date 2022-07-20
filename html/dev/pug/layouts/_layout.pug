@@ -1,0 +1,10 @@
+doctype html
+block vars
+html(lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#")
+    head
+        include _head.pug
+    body(class=key)
+        .wr
+            include _header.pug
+            block contents
+            include _footer.pug

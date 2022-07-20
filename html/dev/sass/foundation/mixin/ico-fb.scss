@@ -1,0 +1,24 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin ico-fb($c: null, $s: null, $c2: null, $op: null, $op2: null) {
+  
+    @if $c == null {   $c: 3b5998 }
+    @if $s == null {   $s: 30px }
+    @if $c2 == null {  $c2: ffffff }
+    @if $op == null {  $op: 1.0 }
+    @if $op2 == null { $op2: 1.0 }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left:0;;
+        display: block;
+        width:#{$s};
+        height:#{$s};
+        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='300px' height='300px' viewBox='0 0 300 300'%3E%3Cdefs%3E%3Cstyle%3E%0A.cls-1%7Bfill:%23" + $c + ";%0Afill-opacity:" + $op2 + "%0A%7D%0A.cls-2%7B%0Afill:%23" + $c2 + ";%0Afill-opacity:" + $op + ";%0A%7D%0A%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M283.44,0H16.56A16.55,16.55,0,0,0,0,16.56V283.44A16.56,16.56,0,0,0,16.56,300H160.24V183.82h-39.1V138.55h39.1V105.16c0-38.75,23.66-59.85,58.23-59.85a321.52,321.52,0,0,1,34.94,1.78v40.5h-24c-18.8,0-22.44,8.93-22.44,22v28.91h44.84L246,183.82H207V300h76.45A16.56,16.56,0,0,0,300,283.44V16.56A16.56,16.56,0,0,0,283.44,0Z'/%3E%3Cpath class='cls-2' d='M207.06,300V183.82h39l5.84-45.27H207.06V109.64c0-13.11,3.64-22,22.44-22h24V47.09a321.1,321.1,0,0,0-34.93-1.78c-34.57,0-58.23,21.1-58.23,59.85v33.39h-39.1v45.27h39.1V300Z'/%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: contain;
+    }
+
+}

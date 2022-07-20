@@ -1,0 +1,12 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin fontsize($s: null, $b: null) {
+
+    @if $s == null { $s: 14 }
+    @if $b == null { $b: 16 }
+
+    font-size: $s + px;
+    font-size: calc($s / $b) * 1rem;
+
+}

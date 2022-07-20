@@ -1,0 +1,24 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin position($p: null, $t: null, $r: null, $b: null, $l: null, $w: null, $h: null) {
+
+    @if $p == null { $p: static }
+    @if $t == null { $t: auto }
+    @if $r == null { $r: auto }
+    @if $b == null { $b: auto }
+    @if $l == null { $l: auto }
+    @if $w == null { $w: auto }
+    @if $h == null { $h: auto }
+
+    position:#{$p};
+    display:block;
+    width:#{$w};
+    height:#{$h};
+    top:#{$t};
+    right:#{$r};
+    bottom:#{$b};
+    left:#{$l};
+    transform: translate(0%, 0%);
+
+}

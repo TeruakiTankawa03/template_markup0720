@@ -1,0 +1,31 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin circle($s: null, $c: null, $r: null) {
+
+    @if $s == null { $s: 20px }
+    @if $c == null { $c: #ffffff }
+
+
+    @if $r != null {
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width:#{$s};
+            padding-top:#{$s};
+            border-radius:50%;
+            background:#{$c};
+
+        }
+    } @else {
+        width:#{$s};
+        height:#{$s};
+        border-radius:50%;
+        background:#{$c};
+    }
+
+}

@@ -1,0 +1,23 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin ico-yt($c: null, $s: null, $c2: null, $op: null) {
+
+    @if $c == null {   $c: ff0000 }
+    @if $s == null {   $s: 30px }
+    @if $c2 == null {   $c2: ffffff }
+    @if $op == null {   $op: 1.0 }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left:0;;
+        display: block;
+        width:#{$s};
+        height:#{$s};
+        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='300px' height='210px' viewBox='0 0 300 210'%3E%3Cdefs%3E%3Cstyle%3E%0A.cls-1%7B%0Afill:%23" + $c2 + ";%0Afill-opacity:" + $op + ";%0A%7D%0A.cls-2%7Bfill:%23" + $c + ";%7D%0A%3C/style%3E%3C/defs%3E%3Cpath class='cls-2' d='M293.54,32.35A37.57,37.57,0,0,0,267.45,6.26C244.08,0,150,0,150,0S56.23-.12,32.62,6.26A37.57,37.57,0,0,0,6.53,32.35,390.52,390.52,0,0,0,0,104.89a390.21,390.21,0,0,0,6.52,72.27,37.57,37.57,0,0,0,26.09,26.09C56,209.52,150,209.52,150,209.52s93.79,0,117.41-6.27a37.57,37.57,0,0,0,26.09-26.09,390.89,390.89,0,0,0,6.25-72.27A390.41,390.41,0,0,0,293.54,32.35ZM120,149.68V59.8l78.28,45Z' /%3E%3Cpolygon class='cls-1' points='120.02 149.68 120.02 59.8 198.29 104.81 120.02 149.68'/%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: contain;
+    }
+    
+}

@@ -1,0 +1,12 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin size($w: null, $h: null) {
+
+    @if $w == null { $w: 100% }
+    @if $h == null { $h: 100% }
+
+    width:#{$w};
+    height:#{$h};
+
+}

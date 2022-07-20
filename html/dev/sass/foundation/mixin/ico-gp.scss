@@ -1,0 +1,21 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin ico-gp($c: null, $s: null) {
+
+    @if $c == null {   $c: dc4e41 }
+    @if $s == null {   $s: 30px }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left:0;;
+        display: block;
+        width:#{$s};
+        height:#{$s};
+        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='300px' height='191px' viewBox='0 0 300 191'%3E%3Cdefs%3E%3Cstyle%3E .fill %7Bfill: %23" + $c + ";%7D %3C/style%3E%3C/defs%3E%3Cpath class='fill' d='M95.44,81.78v32.74h54.19c-2.16,14.06-16.38,41.18-54.14,41.18-32.55,0-59.14-27-59.14-60.29s26.53-60.27,59.1-60.27c18.57,0,31,7.91,38.07,14.72l25.91-24.92C142.8,9.38,121.23,0,95.49,0a95.43,95.43,0,1,0,0,190.85c55.13,0,91.65-38.72,91.65-93.26a86.56,86.56,0,0,0-1.5-15.81Zm204.57,0H272.72V54.49H245.43V81.78H218.16V109h27.3v27.3h27.36V109H300' /%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: contain;
+    }
+
+}

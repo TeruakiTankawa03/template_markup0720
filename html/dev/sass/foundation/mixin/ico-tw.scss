@@ -1,0 +1,21 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin ico-tw($c: null, $s: null) {
+
+    @if $c == null {   $c: 1da1f2 }
+    @if $s == null {   $s: 30px }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left:0;;
+        display: block;
+        width:#{$s};
+        height:#{$s};
+        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='300px' height='244px' viewBox='0 0 300 244'%3E%3Cdefs%3E%3Cstyle%3E .fill %7Bfill: %23" + $c + ";%7D %3C/style%3E%3C/defs%3E%3Cpath class='fill' d='M299.41,29a124.93,124.93,0,0,1-35.31,9.68,61.91,61.91,0,0,0,27-34,127.41,127.41,0,0,1-39.09,14.8,61.48,61.48,0,0,0-106.38,42,62.69,62.69,0,0,0,1.59,14.05A174.16,174.16,0,0,1,20.5,11.44a60.23,60.23,0,0,0-8.33,30.93,61.52,61.52,0,0,0,27.35,51.2,61.29,61.29,0,0,1-27.85-7.7v.76A61.54,61.54,0,0,0,61,147,61.91,61.91,0,0,1,33.35,148,61.71,61.71,0,0,0,90.9,190.74a123.33,123.33,0,0,1-76.28,26.31A130.54,130.54,0,0,1,0,216.22a175,175,0,0,0,94.46,27.61c113.17,0,175-93.7,175-174.82,0-2.61,0-5.25-.19-7.88A124.16,124.16,0,0,0,300,29.29Z' /%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: contain;
+    }
+    
+}

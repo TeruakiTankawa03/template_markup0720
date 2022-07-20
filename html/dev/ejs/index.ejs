@@ -1,0 +1,12 @@
+<%
+var data = {
+    title: 'タイトルが入ります',
+    description: '説明文が入ります',
+    keywords: 'キーワード01, キーワード02'
+};
+%>
+<%- include('layout/_header', {data:data}); %>
+<div>
+    contents
+</div>
+<%- include('layout/_footer', {data:data}); %>

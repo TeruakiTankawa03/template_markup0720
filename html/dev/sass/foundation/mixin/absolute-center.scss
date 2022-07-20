@@ -1,0 +1,12 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin absolute-center() {
+
+    position: absolute;
+    display:block;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+}

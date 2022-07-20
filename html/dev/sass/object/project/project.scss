@@ -1,0 +1,14 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+@use "foundation/mixin" as m;
+
+// sampleです
+// @use 'pages/about.scss';
+// @use 'pages/news.scss';
+//
+// .hoge{
+//     background: v.$primary;
+//     @media (max-width:v.$breakpoint) {
+//         @include m.fontsize(16);
+//     }
+// }

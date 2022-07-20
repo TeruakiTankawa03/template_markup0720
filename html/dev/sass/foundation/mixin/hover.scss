@@ -1,0 +1,18 @@
+@charset "utf-8";
+@use "foundation/variables" as v;
+
+@mixin hover($s: null, $o: null) {
+
+    @if $s == null { $s: 0.3 }
+    @if $o == null { $o: 0.7 }
+
+    cursor:pointer;
+    transition: opacity #{$s}s ease;
+    &:hover{
+        opacity:#{$o};
+        @media (max-width:v.$breakpoint) {
+            opacity: 1;
+        }
+    }
+
+}
