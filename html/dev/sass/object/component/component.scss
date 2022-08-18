@@ -3,7 +3,7 @@
 @use "foundation/mixin" as m;
 
 .c-pc{
-    display: block;
+    display: inline-block;
     @media (max-width:v.$breakpoint) {
         display: none;
     }
@@ -12,6 +12,6 @@
 .c-sp{
     display: none;
     @media (max-width:v.$breakpoint) {
-        display: block;
+        display: inline-block;
     }
 }
