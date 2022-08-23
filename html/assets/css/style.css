@@ -125,7 +125,7 @@ button:focus {
 }
 
 .c-pc {
-  display: block;
+  display: inline-block;
 }
 @media (max-width: 768px) {
   .c-pc {
@@ -138,8 +138,15 @@ button:focus {
 }
 @media (max-width: 768px) {
   .c-sp {
-    display: block;
+    display: inline-block;
   }
+}
+
+a {
+  transition: opacity 0.3s;
+}
+a:hover {
+  opacity: 0.7;
 }
 
 .c-inner01 {

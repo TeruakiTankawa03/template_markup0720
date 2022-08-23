@@ -1,0 +1,1 @@
+@use "foundation/variables" as v;@use "foundation/mixin" as m;a{transition:opacity 0.3s}a:hover{opacity:.7}
