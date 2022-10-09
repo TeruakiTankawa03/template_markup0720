@@ -16,10 +16,18 @@
     line-height: 1;
 }
 
+// ページ内リンクさせる時に、title基準でページ内リンクを設定するのでpadding-topを統一しておく. 
+// PCもSPも最初に決定して統一しておく（margin-bottomもPCとSPを設定しておく）
 .c-title01{
-
+    padding: 0;
+    margin: 0;
+    @media (max-width:v.$breakpoint) {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .c-card01{
-
 }
+
+

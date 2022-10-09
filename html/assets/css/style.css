@@ -162,3 +162,14 @@ a:hover {
   padding: 0 0;
   line-height: 1;
 }
+
+.c-title01 {
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .c-title01 {
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -23,3 +23,11 @@ $white: #ffffff;
 $font-notosans: "Noto Sans JP", sans-serif;
 $font-notoserif: "Noto Serif JP", serif;
 $font-yugo: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
+
+// z-indexはここに記載する
+// できるだけ多用しない。PCだけ、SPだけで使用できないか考える。
+// デフォルト値：position: static; なので、staticで解除可能
+
+// header = 
+// header__ham-button = 
+// modal = 
