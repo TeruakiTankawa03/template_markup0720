@@ -50,8 +50,10 @@ function task_webp() {
 }
 
 function task_watch(done) {
-    gulp.watch("./sass/**/*", gulp.series(task_sass, browserReload));
-    gulp.watch(["pug/", "!pug/**/_*.pug"], task_pug);
+    // gulp.watch(["pug/", "!pug/**/_*.pug"], task_pug); // pugを使わないときは、これを有効化
+    // gulp.watch("./sass/**/*", gulp.series(task_sass, browserReload)); // pugを使わないときは、これを有効化
+    gulp.watch(["pug/", "!pug/**/_*.pug"], gulp.series(task_pug, browserReload)); // pugを使わないときは、これを無効化
+    gulp.watch(["./sass/**/*"], gulp.series(task_sass, browserReload)); // pugを使うときは、これを有効化
     gulp.watch(["ejs/", "!ejs/**/_*.ejs"], task_ejs);
     done();
 }
@@ -73,7 +75,7 @@ function browserReload(done) {
 
 
 const watch = gulp.parallel(task_watch, browserInit); //並行して実行したいタスク
-const build = gulp.series(task_sass, watch); // 3.task_sassをseriesでbuildに. 順番に動く
+const build = gulp.series(task_pug, task_sass, watch); // 3.task_sassをseriesでbuildに. 順番に動く
 // const next = gulp.series(browserReload); // 順番に動く
 
 exports.sass = task_sass; // 2.task_sassをexportでsassに

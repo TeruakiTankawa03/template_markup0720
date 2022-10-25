@@ -173,3 +173,19 @@ a:hover {
     margin: 0;
   }
 }
+
+p {
+  color: red;
+}
+
+.test {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+p {
+  color: blue;
+}
