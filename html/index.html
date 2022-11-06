@@ -1,41 +1,50 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  <head>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>test</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="">
-    <meta name="twitter:image:src" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="https://">
+    <title>ページタイトル</title>
+    <meta name="description" content="ページの説明(120文字以内)">
+    <meta name="keywords" content="">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:title" content="株式会社きんこうの事業紹介ページ">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="">
-    <meta property="og:site_name" content="">
-    <link rel="icon" type="image/png" href="">
-    <link rel="apple-touch-icon-precomposed" href="">
-    <link rel="canonical" href="">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="assets/js/bundle.js"></script>
-  </head>
-  <body class="top">
-    <div class="wr">
-      <header class="hd">
-        <div class="hd__in">
-          <h1 class="hd__ttl">test</h1>
+    <meta property="og:description" content="株式会社きんこうの事業紹介ページです。">
+    <meta property="og:image" content="画像パス（絶対パス）">
+    <meta property="og:url" content="ページURL（絶対パス）">
+    <meta property="og:site_name" content="株式会社きんこう">
+    <meta name="twitter:card" content="カードタイプ">
+    <meta name="twitter:site" content="@ユーザー名">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+    <header class="l-header">
+        <div class="l-header__inner">
+            <nav class="l-header__navigation">
+                <ul class="l-header__list">
+                    <li class="l-header__item"><a href="#about">○○とは</a></li>
+                    <li class="l-header__item"><a href="#service">サービス内容</a></li>
+                    <li class="l-header__item"><a href="#news">お知らせ</a></li>
+                    <li class="l-header__item"><a href="#contact">お問い合わせ</a></li>
+                    <li class="l-header__item"><a href="#other">その他</a></li>
+                </ul>
+            </nav>
+            <div class="l-header__ham-button"><span></span><span></span><span></span></div>
         </div>
-      </header>
-      <div class="test">test</div>
-      <p>test</p>
-      <footer class="ft">
-        <div class="fi__in"><small class="ft__copy">&copy; test.</small></div>
-      </footer>
-    </div>
-  </body>
+    </header>
+    <main></main>
+    <footer class="l-footer">
+        <div class="l-footer__inner">
+            <p class="l-footer__copyright"></p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+</body>
+
 </html>

@@ -1,10 +1,10 @@
 doctype html
 block vars
-html(lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#")
-    head
+html(lang="ja")
+    //- ↓ 記事ページの場合は、2箇所ある「website」を「article」に変更する
+    head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
         include _head.pug
     body(class=key)
-        .wr
-            include _header.pug
-            block contents
-            include _footer.pug
+        include _header.pug
+        block contents
+        include _footer.pug

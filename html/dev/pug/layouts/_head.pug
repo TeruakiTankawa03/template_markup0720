@@ -1,26 +1,29 @@
 meta(charset="UTF-8")
-meta(name="viewport" content="width=device-width")
-meta(http-equiv="X-UA-Compatible" content="IE=edge")
-title test
+meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//- ↓ HTML内の電話番号を自動でリンク設定にしないようにするタグ
+meta(name="format-detection" content="telephone=no") 
+title ページタイトル
+meta(name="description" content="ページの説明(120文字以内)")
 meta(name="keywords" content="")
-meta(name="description" content="")
-meta(name="format-detection" content="telephone=no")
-meta(name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+//- ↓ ファビコン
+link(rel="icon" href="favicon.ico")
+//- ↓ アップルタッチアイコン
+link(rel="apple-touch-icon" href="apple-touch-icon.png")
 
-meta(name="twitter:card" content="summary_large_image")
-meta(name="twitter:site" content="")
-meta(name="twitter:image:src" content="")
-
-meta(property="og:title" content="")
-meta(property="og:description" content="")
-meta(property="og:url" content="https://")
+//- ↓ OGP 参考サイト → https://junpei-sugiyama.com/ogp/
+//- ↓ title = ページごとに変わる
+meta(property="og:title" content="株式会社きんこうの事業紹介ページ")
+//- ↓ トップページ = website, トップページ以外なら article
 meta(property="og:type" content="website")
-meta(property="og:image" content="")
-meta(property="og:site_name" content="")
-
-link(rel="icon" type="image/png" href="")
-link(rel="apple-touch-icon-precomposed" href="")
-link(rel="canonical" href="")
-link(rel="stylesheet" type="text/css" href="assets/css/style.css")
-
-script(src="assets/js/bundle.js")
+//- ↓ ページの概要（説明文）を設定。文字数は80〜90文字程度が推奨（ページごとに設定した方がよさそう）
+meta(property="og:description" content="株式会社きんこうの事業紹介ページです。")
+meta(property="og:image" content="画像パス（絶対パス）")
+meta(property="og:url" content="ページURL（絶対パス）")
+//- ↓ サイト名なので全ページ共通でOK
+meta(property="og:site_name" content="株式会社きんこう")
+//- ↓ Twitterカード, content="summary_large_image" をよく使いそう
+meta(name="twitter:card" content="カードタイプ")
+meta(name="twitter:site" content="@ユーザー名")
+//- ↓ css
+link(rel="stylesheet" href="./assets/css/style.css")
+meta(name="robots" content="noindex")

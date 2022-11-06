@@ -1,3 +1,41 @@
-header.hd
-    div.hd__in
-        h1.hd__ttl test
+//- 変数 = #{} で呼び出し
+//- 属性の値を呼び出す変数 = `${}` で呼び出し
+
+-
+    const menus = [
+        {
+            name: "○○とは",
+            url: "#about"
+        },
+        {
+            name: "サービス内容",
+            url: "#service"
+        },
+        {
+            name: "お知らせ",
+            url: "#news"
+        },
+        {
+            name: "お問い合わせ",
+            url: "#contact"
+        },
+        {
+            name: "その他",
+            url: "#other"
+        },
+    ];
+
+header.l-header
+    //- h1.l-header__logo
+    //-     a(href="#")
+    //-         img(src="", alt="")
+    div.l-header__inner
+        nav.l-header__navigation
+            ul.l-header__list
+                each menu in menus
+                    li.l-header__item
+                        a(href=`${menu.url}`) #{menu.name}
+        .l-header__ham-button
+            span
+            span
+            span

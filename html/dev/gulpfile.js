@@ -8,6 +8,7 @@ const ejs = require("gulp-ejs");
 const pug = require("gulp-pug");
 const webp = require("gulp-webp");
 const browserSync = require("browser-sync"); // 1.読み込み
+const htmlbeautify = require("gulp-html-beautify"); // インデントを四つに設定する
 
 function task_sass() { // 3.関数になる
     return gulp
@@ -26,6 +27,9 @@ function task_pug() {
     return gulp
         .src(["pug/**/*.pug", "!pug/**/_*.pug"])
         .pipe(pug({ pretty: true }))
+        .pipe(htmlbeautify({ // インデント幅の調整
+            "indent_size": 4,
+        }))
         .pipe(gulp.dest("../"));
 }
 
