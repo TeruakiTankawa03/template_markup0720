@@ -1,9 +1,13 @@
+block value
+
 meta(charset="UTF-8")
 meta(name="viewport" content="width=device-width, initial-scale=1.0")
 //- ↓ HTML内の電話番号を自動でリンク設定にしないようにするタグ
 meta(name="format-detection" content="telephone=no") 
-title ページタイトル
-meta(name="description" content="ページの説明(120文字以内)")
+//- ↓ ①通常の文字の変数は #{} で囲う
+title #{title}
+//- ↓ ②属性の値は変数名を文字だけで指定してOK
+meta(name="description" content=description)
 meta(name="keywords" content="")
 //- ↓ ファビコン
 link(rel="icon" href="favicon.ico")
@@ -12,11 +16,11 @@ link(rel="apple-touch-icon" href="apple-touch-icon.png")
 
 //- ↓ OGP 参考サイト → https://junpei-sugiyama.com/ogp/
 //- ↓ title = ページごとに変わる
-meta(property="og:title" content="株式会社きんこうの事業紹介ページ")
+meta(property="og:title" content=ogTitle)
 //- ↓ トップページ = website, トップページ以外なら article
-meta(property="og:type" content="website")
 //- ↓ ページの概要（説明文）を設定。文字数は80〜90文字程度が推奨（ページごとに設定した方がよさそう）
-meta(property="og:description" content="株式会社きんこうの事業紹介ページです。")
+meta(property="og:description" content=ogDescription)
+meta(property="og:type" content=type)
 meta(property="og:image" content="画像パス（絶対パス）")
 meta(property="og:url" content="ページURL（絶対パス）")
 //- ↓ サイト名なので全ページ共通でOK

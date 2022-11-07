@@ -1,10 +1,11 @@
 doctype html
-block vars
+//- block vars
 html(lang="ja")
     //- ↓ 記事ページの場合は、2箇所ある「website」を「article」に変更する
     head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
+        //- include = 共通パーツを読み込む
         include _head.pug
-    body(class=key)
+    body
         include _header.pug
         block contents
         include _footer.pug
