@@ -24,10 +24,36 @@ $font-notosans: "Noto Sans JP", sans-serif;
 $font-notoserif: "Noto Serif JP", serif;
 $font-yugo: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
 
+// SCSS, なるべくネストしない方向でいけたらいいね、、、！
+// その方がSCSSファイル内での検索も早いし、HTMLからclass名を引っ張ってきてコピペもしやすい。つまり全部ユニーククラスでもいいのかもしれない
+
+// パーツの共通化をしつつも、それでも派生系スタイルのclassをつける必要がある場合、そのセクション or ページ の名前を is-○○ としてつけてあげると良いかも
+// （状況によるが）全ページプロト引いてからやった方がいいかもしれない
+
 // z-indexはここに記載する
 // できるだけ多用しない。PCだけ、SPだけで使用できないか考える。
 // デフォルト値：position: static; なので、staticで解除可能
 
+// ↓書き方①
 // header = 
 // header__ham-button = 
 // modal = 
+
+// ↓書き方②
+// $z-index: (
+//     header: 1,
+//     header__ham-button: 1,
+//     modal: 1,
+//     floating: 1,
+//     default: 1
+// );
+
+// .example {
+//     z-index: map-get($z-index, "header");
+// }
+// .example__inner {
+//     z-index: map-get($z-index, "header") + 1;
+// }
+// .example__outer {
+//     z-index: map-get($z-index, "header") - 1;
+// }
